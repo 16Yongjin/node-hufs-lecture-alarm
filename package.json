@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fxsql": "^1.2.0",
+    "morgan": "^1.9.1",
     "partial-js": "^1.1.8",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"

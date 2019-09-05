@@ -7,7 +7,6 @@ const UserService = UserRepository => ({
   async findUserAlarms(req, res) {
     const user = req.params.user
     const lectures = await UserRepository.findUserAlarms(user)
-    console.log('myAlarms', lectures)
     res.send(lectures)
   },
   // POST /myalarm

@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const morgan = require('morgan')
 const { PostgreSQL } = require('fxsql')
 const Looper = require('./services/looper')
 
@@ -25,6 +26,8 @@ const routers = express.Router().use(userRouter, alarmRouter)
 const port = process.env.PORT || 8080
 
 const app = express()
+
+app.use(morgan('common'))
 
 app.use(bodyParser.text())
 
