@@ -6,9 +6,9 @@ const Looper = require('./services/looper')
 
 const { CONNECT } = PostgreSQL
 const POOL = CONNECT({
-  host: 'localhost',
-  user: 'postgres',
-  password: 'postgres',
+  host: process.env.POSTGRES_DB || 'localhost',
+  user: process.env.POSTGRES_USER || 'postgres',
+  password: process.env.POSTGRES_PASSWARD || 'postgres',
   database: 'lectures'
 })
 
