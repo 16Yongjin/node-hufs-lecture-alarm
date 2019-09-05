@@ -23,7 +23,7 @@ const UserService = UserRepository => ({
       await UserRepository.addUserAlarm(user, lectureId)
       const lectures = await UserRepository.findUserAlarms(alarm.user.id)
 
-      res.send(lectures)
+      res.status(201).send(lectures)
     } catch (error) {
       console.log(error)
       res.status(422).send(error)
